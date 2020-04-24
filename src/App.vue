@@ -1,32 +1,56 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div class='bg'>
+    <headerTop></headerTop>
+    <section class="bg__middle">
+      <router-view class=""></router-view>
+      <sectionRight></sectionRight>
+    </section>
+    <footerBottom></footerBottom>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import headerTop from "@/components/headertop";
+import sectionRight from "@/components/sectionright";
+import footerBottom from "@/components/footerbottom";
+export default {
+  name: '',
+  data(){
+    return {}
+  },
+  components: {
+    headerTop,
+    footerBottom,
+    sectionRight
+  },
+  created(){},
+  mounted(){},
+  methods: {}
+}
+</script>
+<style lang='scss' scoped>
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+ caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .bg {
+    &__middle {
+      display: flex;
+    }
+  }
 </style>
