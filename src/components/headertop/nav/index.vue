@@ -10,7 +10,7 @@
       mode="horizontal"
       text-color="#fff"
       active-text-color="#ffd04b">
-      <item v-for="(route, index) in navItems" :route="route" :key="index"> </item>
+      <item v-for="(route, index) in navItems" :route="route" :key="index"></item>
     </el-menu>
 
   </div>

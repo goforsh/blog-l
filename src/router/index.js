@@ -7,12 +7,20 @@ Vue.use(VueRouter)
     {
       path: "/",
       name: "Home",
+      meta: {
+        title: "主页",
+        icon: "el-icon-s-home"
+      },
       component: () =>
         import(/* webpackChunkName: "home" */ "../views/home")
     },
     {
       path: "/about",
       name: "About",
+      meta: {
+        title: "关于",
+        icon: "el-icon-set-up"
+      },
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -22,6 +30,10 @@ Vue.use(VueRouter)
     {
       path: "/category",
       name: "Category",
+      meta: {
+        title: "分类",
+        icon: "el-icon-menu"
+      },
       component: () =>
         import(/* webpackChunkName: "home" */ "../views/category")
     }
