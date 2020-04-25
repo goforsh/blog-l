@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-  const routes = [
+ const routes = [
     {
       path: "/",
       name: "Home",
@@ -26,6 +26,7 @@ Vue.use(VueRouter)
         import(/* webpackChunkName: "home" */ "../views/category")
     }
   ];
+  
 
 const router = new VueRouter({
   mode: 'history',
@@ -34,3 +35,4 @@ const router = new VueRouter({
 })
 
 export default router
+export {routes}
