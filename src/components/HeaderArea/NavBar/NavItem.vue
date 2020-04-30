@@ -25,7 +25,7 @@ export default {
                 return createItem(routes, base)
             } else {
                 return h('el-submenu', [
-                    //stupid here, but it works:P
+                    //not elegant here, but it works:P
                     <template slot="title"><i class={routes.meta.icon}></i>{routes.meta.title}</template>,
                     ...routes.children.map(route => {
                         return createSubMenu(route, routes.path)

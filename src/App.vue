@@ -1,27 +1,27 @@
 <template>
-  <div class='bg'>
-    <headerTop></headerTop>
-    <section class="bg__middle">
-      <router-view class=""></router-view>
-      <sectionRight></sectionRight>
+  <div class='l-bg'>
+    <HeaderArea class="l-bg__header"></HeaderArea>
+    <section class="l-bg__middle">
+      <router-view class="l-bg__middle-main"></router-view>
+      <MainAside class="l-bg__middle-side"></MainAside>
     </section>
-    <footerBottom></footerBottom>
+    <FooterArea></FooterArea>
   </div>
 </template>
 
 <script>
-import headerTop from "@/components/headertop";
-import sectionRight from "@/components/sectionright";
-import footerBottom from "@/components/footerbottom";
+import HeaderArea from "@/components/HeaderArea";
+import MainAside from "@/components/MainAside";
+import FooterArea from "@/components/FooterArea";
 export default {
   name: '',
   data(){
     return {}
   },
   components: {
-    headerTop,
-    footerBottom,
-    sectionRight
+    HeaderArea,
+    MainAside,
+    FooterArea
   },
   created(){},
   mounted(){},
@@ -29,28 +29,26 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
- caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-}
-
-  .bg {
+  .l-bg {
+    display: flex;
+    flex-direction: column;
+    background-color: gainsboro;
+    align-items: center;
+    &__header {
+      flex: 0 0 600px;
+    }
     &__middle {
+      flex: 1;
       display: flex;
+      padding: 0 30px 0;
+      width: 80%;
+      &-main {
+        flex: 1;
+      }
+      &-side {
+        flex: 0 0 300px;
+      }
+
     }
   }
 </style>

@@ -1,3 +1,3 @@
 export default {
-    navItems:[123]
+    navItems:[]
 }
