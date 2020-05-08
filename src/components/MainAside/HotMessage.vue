@@ -1,8 +1,18 @@
 <template>
   <div class='l-message'>
-      <TagClip class="l-message__tag">
-          <span>热门文章</span>
-      </TagClip>
+    <TagClip class="l-message__tag">
+        <span>热门文章</span>
+    </TagClip>
+    <ul class="l-message__list">
+      <li v-for="(item, index) in article"
+          :key="index">
+         <router-link :to="item.url"
+                      class="l-message__item">
+            <span>{{item.name}}</span>
+            <span>——{{item.num}}次点击</span>
+          </router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -12,7 +22,22 @@ import TagClip from "../common/TagClip";
 export default {
   name: '',
   data(){
-    return {}
+    return {
+      article:[
+        {
+          name: '杰杰娃SB',
+          num: '250',
+          url: '/article',
+          id: 0
+        },
+        {
+          name: '当当娃SB',
+          num: '250',
+          url: '',
+          id: 1
+        }
+      ]
+    }
   },
   components: {
       TagClip
@@ -39,6 +64,18 @@ export default {
         position: absolute;
         top: 10px;
         left: -16px;
+    }
+    &__list {
+      padding: 48px 10px 10px;
+    }
+    &__item {
+      text-decoration: none;
+      font-size: 15px;
+      color: rgb(59, 58, 58);
+      span:last-child {
+        font-size: 12px;
+        color: rgb(133, 129, 129);
+      }
     }
 }
 </style>

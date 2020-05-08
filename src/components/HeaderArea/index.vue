@@ -2,7 +2,7 @@
   <div class='l-header'>
     <NavBar class="l-header__menu"></NavBar>
     <section class="l-header__board">
-      <div class="l-header__portrait"></div>
+      <IconPortrait :url="url"></IconPortrait>
       <div id="vader"></div>
     </section>
   </div>
@@ -11,13 +11,17 @@
 <script>
 import NavBar from "./NavBar";
 import theaterJS from "theaterJS";
+import IconPortrait from '../../components/common/IconPortrait';
 export default {
   name: '',
   data(){
-    return {}
+    return {
+      url:require('../../assets/logo.png')
+    }
   },
   components: {
-    NavBar
+    NavBar,
+    IconPortrait
   },
   created(){},
   mounted(){
@@ -75,7 +79,6 @@ export default {
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      background: url('../../assets/logo.png');
       background-size: 100% 100%;
 
     }

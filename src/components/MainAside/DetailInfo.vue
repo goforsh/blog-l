@@ -1,27 +1,29 @@
 <template>
   <div class='l-info'>
       <div class="l-info__header">
-          <img src="../../assets/logo.png" alt="">
+          <img  v-for="(item, index) in portrait"
+                :key="index"
+                height="200" 
+                width="200"
+                v-show="item.name==current" 
+                :src="item.url">
       </div>
-      <section class="l-info__detail">
-          <div class="l-info__category">
-              <span>28</span>
-              <span>博文</span>
+      <div class="l-info__detail">
+          <div class="l-info__category"
+               v-for="(item, index) in grid"
+               :key="index">
+              <span>{{item.name}}</span>
+              <span>{{item.num}}</span>
           </div>
-          <div class="l-info__category">
-              <span>28</span>
-              <span>留言</span>
-          </div>
-      </section>
+      </div>
       <div class="l-info__footer">
-          <el-tooltip class="l-info__tip" v-for="(item,index) in contact" :key="index" :content="item.name" placement="top" >
-            <a  :href="item.URL" target="_blank" ><i :class="item.icon"></i></a>
-          </el-tooltip>
+        <SharingIcon :items="contact" @click="iconClick"></SharingIcon>
       </div>
   </div>
 </template>
 
 <script>
+import SharingIcon from "../common/SharingIcon";
 export default {
   name: '',
   data(){
@@ -30,30 +32,64 @@ export default {
             {
                 name: 'QQ',
                 icon: 'fa fa-fw fa-qq',
-                URL: ''
-            },
-            {
-                name: 'WeChat',
-                icon: 'fa fa-fw fa-wechat',
-                URL: ''
+                URL: '#QQ'
             },
             {
                 name: 'WeiBo',
                 icon: 'fa fa-fw fa-weibo',
-                URL: ''
+                URL: '#WeiBo'
             },
             {
                 name: 'GitHub',
                 icon: 'fa fa-fw fa-github',
                 URL: ''
             }
+        ],
+        portrait:[
+            {
+                name: 'me',
+                url: require("../../assets/logo.png")
+            },
+            {
+                name: 'QQ',
+                url: require("../../assets/timg.jpeg")
+            },
+            {
+                name: 'WeiBo',
+                url: require("../../assets/logo.png")
+            },
+            {
+                name: 'GitHub',
+                url: require("../../assets/logo.png")
+            }
+        ],
+        current: 'me',
+        grid:[
+            {
+                name:'博文',
+                num: 1
+            },
+            {
+                name:'留言',
+                num: 13
+            },
+            {
+                name:'访客',
+                num: 12
+            }
         ]
     }
   },
-  components: {},
+  components: {
+      SharingIcon
+  },
   created(){},
   mounted(){},
-  methods: {}
+  methods: {
+      iconClick(item) {
+          this.current = item.name
+      }
+  }
 }
 </script>
 <style lang='scss' scoped>
@@ -76,6 +112,7 @@ export default {
         border-radius: 5px;
         text-align: center;
         margin-bottom: 5px;
+       
     }
     &__detail {
         display: flex;
@@ -92,32 +129,13 @@ export default {
         span:first-child {
             color: rgb(85, 85, 85);
         }
-        &:first-child {
-            border-right-style: solid;
-            border-right-width: 1px;
+        &+& {
+            border-left-style: solid;
+            border-left-width: 1px;
         }
     }
     &__footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 80%;
-        a {
-            text-decoration: none;
-            &:hover i{
-                color:#fff;
-                background: #F4692C;
-            }
-            i {
-                color:rgba(0,0,0,0.5);
-                width: 42px;
-                height: 42px;
-                border-radius: 50%;
-                font-size: 18px;
-                line-height: 42px;
-                background: rgba(0,0,0,0.1);
-            }
-        }
+        width: 70%;
     }
 }
 </style>
