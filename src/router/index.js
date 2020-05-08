@@ -35,7 +35,23 @@ Vue.use(VueRouter)
         icon: "el-icon-menu"
       },
       component: () =>
-        import(/* webpackChunkName: "home" */ "../views/category")
+        import(/* webpackChunkName: "category" */ "../views/category")
+    },
+    {
+      path: "/message",
+      name: "Message",
+      meta: {
+        title: "留言板",
+        icon: "el-icon-s-comment"
+      },
+      component: () =>
+        import(/* webpackChunkName: "MessageBoard" */ "../views/MessageBoard")
+    },
+    {
+      path: "/article",
+      name: "Article",
+      component: () =>
+        import(/* webpackChunkName: "ArticleContent" */ "../views/ArticleContent")
     }
   ];
   
