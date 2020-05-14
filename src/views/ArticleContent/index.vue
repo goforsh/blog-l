@@ -6,7 +6,7 @@
         <span>分类</span>
       </TagClip>
       <article class='l-content__article'>
-        这是正文
+        <div>这是文章{{$route.params.id}}</div>
       </article>
       <div class="l-content__footer">
         <div class="l-content__share">

@@ -27,13 +27,13 @@ export default {
         {
           name: '杰杰娃SB',
           num: '250',
-          url: '/article',
+          url: '/article/'+1,
           id: 0
         },
         {
           name: '当当娃SB',
           num: '250',
-          url: '',
+          url: '/article/'+2,
           id: 1
         }
       ]
@@ -61,9 +61,9 @@ export default {
       transform: translateY(-2px);
     }
     &__tag {
-        position: absolute;
-        top: 10px;
-        left: -16px;
+      position: absolute;
+      top: 10px;
+      left: -16px;
     }
     &__list {
       padding: 48px 10px 10px;

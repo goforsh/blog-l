@@ -11,7 +11,7 @@
         <img src="../../assets/nezha.jpg" class="l-article__main-img">
       </article>
       <footer class="l-article__footer">
-        <ClickMore :width="'80px'" :height="'30px'">阅读全文>></ClickMore>
+        <ClickMore :width="'80px'" :height="'30px'" @click.native="goArticle">阅读全文>></ClickMore>
       </footer>
   </div>
 </template>
@@ -25,6 +25,7 @@ export default {
   data(){
     return {}
   },
+  props:['item'],
   components: {
     TagClip,
     ClickMore,
@@ -32,7 +33,17 @@ export default {
   },
   created(){},
   mounted(){},
-  methods: {}
+  methods: {
+    goArticle() {
+      console.log(1)
+      this.$router.push({
+        name:'Article',
+        params:{
+          id: this.item
+        }
+      })
+    }
+  }
 }
 </script>
 <style lang='scss' scoped>

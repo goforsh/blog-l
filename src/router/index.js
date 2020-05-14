@@ -48,7 +48,7 @@ Vue.use(VueRouter)
         import(/* webpackChunkName: "MessageBoard" */ "../views/MessageBoard")
     },
     {
-      path: "/article",
+      path: "/article/:id",
       name: "Article",
       component: () =>
         import(/* webpackChunkName: "ArticleContent" */ "../views/ArticleContent")
@@ -59,6 +59,22 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
+  scrollBehavior(to, from, savePosition) { // 在点击浏览器的“前进/后退”，或者切换导航的时候触发。
+    if (savePosition) {
+      return savePosition;
+    } else {
+      var top;
+      if (window.innerWidth >= 700) {
+        top = 562
+      } else {
+        top = 267
+      }
+      return {
+        x: 0,
+        y: top
+      }
+    }
+  },
   routes
 })
 

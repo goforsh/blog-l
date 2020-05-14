@@ -10,7 +10,7 @@
 
 <script>
 import NavBar from "./NavBar";
-import theaterJS from "theaterJS";
+import theaterJS from "theaterjs";
 import IconPortrait from '../../components/common/IconPortrait';
 export default {
   name: '',
@@ -80,7 +80,6 @@ export default {
       height: 100px;
       border-radius: 50%;
       background-size: 100% 100%;
-
     }
     #vader {
       background: linear-gradient(to right, #DF2050, #48456D);
