@@ -43,6 +43,8 @@ export default {
 
     theater
       .addScene("vader:我走的", 200, "很慢,",400,"但我", 200, "一直", 200, "在走", 200, "... ")
+
+
       
   },
   methods: {}

@@ -28,14 +28,14 @@ Vue.use(VueRouter)
         import(/* webpackChunkName: "about" */ "../views/about")
     },
     {
-      path: "/category",
-      name: "Category",
+      path: "/begging",
+      name: "Begging",
       meta: {
-        title: "分类",
-        icon: "el-icon-menu"
+        title: "赞赏",
+        icon: "el-icon-tableware"
       },
       component: () =>
-        import(/* webpackChunkName: "category" */ "../views/category")
+        import(/* webpackChunkName: "BeggingBowl" */ "../views/BeggingBowl")
     },
     {
       path: "/message",

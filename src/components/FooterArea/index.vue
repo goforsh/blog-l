@@ -4,7 +4,6 @@
       Vue & XXX
     </p>
     <PointsWave :color="0x97dffd" :waveHeight="250"></PointsWave>
-    
   </div>
 </template>
 
