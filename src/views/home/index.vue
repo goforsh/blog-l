@@ -1,6 +1,6 @@
 <template>
   <div class="l-home">
-    <ArticleItem v-for="i in 4" :key="i"></ArticleItem>
+    <ArticleItem v-for="i in 4" :key="i" :item="i"></ArticleItem>
     <ClickMore :width="'70%'" :height="'38px'">点击加载更多</ClickMore>
   </div>
 </template>

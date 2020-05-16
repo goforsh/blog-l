@@ -24,7 +24,19 @@ export default {
     FooterArea
   },
   created(){},
-  mounted(){},
+  mounted(){
+    // let div = document.querySelector('.l-bg__middle-side')
+
+    // window.addEventListener('scroll',()=>{
+    //   if (document.documentElement.scrollTop >= 600) {
+    //     div.style.position = 'fixed'
+    //     div.style.top = document.documentElement.scrollTop - 600 + 'px'
+    //   }
+    //   if (document.documentElement.scrollTop < 600) {
+    //     div.style.position = 'static'
+    //   }
+    // })
+  },
   methods: {}
 }
 </script>
@@ -48,7 +60,6 @@ export default {
       &-side {
         flex: 0 0 300px;
       }
-
     }
   }
 </style>

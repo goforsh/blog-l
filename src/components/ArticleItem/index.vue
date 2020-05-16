@@ -3,18 +3,7 @@
       <TagClip class="l-article__tag">
           <span>分类</span>
       </TagClip>
-      <header class="l-article__header">
-        <h1>这是标题
-          <small v-if="false">这是副标题</small>
-        </h1>
-        <h2>
-          <i class="el-icon-user-solid"></i> 发表于
-          <i class="el-icon-time"></i> 2020
-          <i class="el-icon-view"></i> 0次围观
-          <i class="el-icon-thumb"></i> 0次点赞
-          <i class="el-icon-star-on"></i> 0次收藏
-        </h2>
-      </header>
+      <ArticleHeader :title="'这是标题'"></ArticleHeader>
       <article class="l-article__main">
         <p>
           这是文章概述
@@ -22,7 +11,7 @@
         <img src="../../assets/nezha.jpg" class="l-article__main-img">
       </article>
       <footer class="l-article__footer">
-        <ClickMore :width="'80px'" :height="'30px'">阅读全文>></ClickMore>
+        <ClickMore :width="'80px'" :height="'30px'" @click.native="goArticle">阅读全文>></ClickMore>
       </footer>
   </div>
 </template>
@@ -30,18 +19,31 @@
 <script>
 import TagClip from "../common/TagClip";
 import ClickMore from "../common/ClickMore";
+import ArticleHeader from '../common/ArticleHeader';
 export default {
   name: '',
   data(){
     return {}
   },
+  props:['item'],
   components: {
     TagClip,
-    ClickMore
+    ClickMore,
+    ArticleHeader
   },
   created(){},
   mounted(){},
-  methods: {}
+  methods: {
+    goArticle() {
+      console.log(1)
+      this.$router.push({
+        name:'Article',
+        params:{
+          id: this.item
+        }
+      })
+    }
+  }
 }
 </script>
 <style lang='scss' scoped>
@@ -61,18 +63,6 @@ export default {
       position: absolute;
       top: 30px;
       left: -16px;
-    }
-    &__header {
-      text-align: center;
-      color:#444;
-      h1 {
-        font-weight: 700;
-        font-size: 25px;
-      }
-      h2 {
-        color: rgb(85, 85, 85);
-        font-size: 14px;
-      }
     }
     &__main {
       max-height: 300px;
