@@ -16,7 +16,7 @@ export default {
   name: '',
   data(){
     return {
-      url:require('../../assets/logo.png')
+      url:require('../../assets/pic/por.jpg')
     }
   },
   components: {
@@ -55,8 +55,8 @@ export default {
 .l-header {
   height: 500px;
   width: 100%;
-  background: url('../../assets/timg.jpeg') no-repeat;
-  background-size: 100% 80%;
+  background: url('../../assets/pic/fate.jpg') no-repeat;
+  background-size: 100% 90%;
   background-clip: border-box;
   
   &__menu {
@@ -72,7 +72,7 @@ export default {
     margin: 0 auto;
     height: 300px;
     position: relative;
-    top: 200px;
+    top: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
