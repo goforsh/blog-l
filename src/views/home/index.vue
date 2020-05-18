@@ -1,7 +1,11 @@
 <template>
   <div class="l-home">
     <ArticleItem v-for="i in 4" :key="i" :item="i"></ArticleItem>
-    <ClickMore :width="'70%'" :height="'38px'">点击加载更多</ClickMore>
+    <ClickMore :width="'70%'" :height="'38px'">
+      <span>
+        点击加载更多
+      </span>
+    </ClickMore>
   </div>
 </template>
 
@@ -20,6 +24,9 @@ export default {
 
 <style lang='scss' scoped>
   .l-home {
-    
+    span {
+      font-size: .8rem;
+      line-height: 38px;
+    }
   }
 </style>

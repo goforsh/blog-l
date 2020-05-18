@@ -17,10 +17,7 @@
         </div>
         <div class="l-content__begging">
           <el-button type="danger" @click="showBeg=!showBeg">赞赏</el-button>
-          <div class="l-content__begimg">
-            <img src="../../assets/logo.png" v-show="showBeg" alt="">
-            <img src="../../assets/logo.png" v-show="showBeg" alt="">
-          </div>
+          <BeggingImg v-show="showBeg"></BeggingImg>
         </div>
       </div>
     </div>
@@ -33,7 +30,7 @@ import ArticleHeader from '../../components/common/ArticleHeader';
 import TagClip from '../../components/common/TagClip';
 import SharingIcon from '../../components/common/SharingIcon';
 import CommentBoard from '../../components/common/CommentBoard';
-
+import BeggingImg from '../../components/common/BeggingImg';
 export default {
   name: '',
   data(){
@@ -57,7 +54,8 @@ export default {
     ArticleHeader,
     TagClip,
     SharingIcon,
-    CommentBoard
+    CommentBoard,
+    BeggingImg
   },
   created(){},
   mounted(){
@@ -71,6 +69,7 @@ export default {
 <style lang='scss' scoped>
 .l-content {
     width: 90%;
+    padding: .5rem;
     margin: 0 auto 10px;
     background-color: #fff;
     border-radius: 5px;
@@ -83,9 +82,10 @@ export default {
     &__tag {
       position: absolute;
       left: -16px;
+      top: 40px;
     }
     &__article {
-      font-size: 35px;
+      
     }
     &__footer {
       padding: 0 10px 0;
@@ -95,6 +95,7 @@ export default {
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      font-size: .8rem;
       span {
         flex: 0 0 auto;
       }

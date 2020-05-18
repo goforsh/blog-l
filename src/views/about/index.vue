@@ -9,20 +9,16 @@
         <p>
           但愿学有所成        
         </p>
-      </div>
-
-
-
+      </div>     
+    </div>
+    <CommentBoard :title="'吐槽一下'"></CommentBoard>
+  </div>
       <!-- <div class="wave wave5"></div>
 <div class="wave wave4"></div>
 <div class="wave wave3"></div>
 <div class="wave wave2"></div>
 <div class="wave wave1"></div>
 <div class="wave wave0"></div> -->
-      
-    </div>
-      <CommentBoard></CommentBoard>
-  </div>
 </template>
 
 <script>
@@ -45,12 +41,12 @@ export default {
 <style lang='scss' scoped>
 .l-about {
   width: 90%;
-  
   margin: 0 auto 10px;
   background-color: #fff;
   border-radius: 5px;
   transition: all .3s linear;
   position: relative;
+  
   &:hover {
       box-shadow:0 15px 30px rgba(0,0,0,.1);
       transform: translateY(-2px);   
@@ -59,7 +55,7 @@ export default {
     padding: 150px 10px 10px;
     text-indent: 2em;
     line-height: 2em;
-    font-size: 1rem;
+    font-size: .8rem;
     color: rgb(68, 68, 68);
   }
 }

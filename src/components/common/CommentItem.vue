@@ -51,7 +51,6 @@ export default {
     flex: 1;
     display: flex;
     flex-direction: column;
-
   }
   &__header {
     flex: 0 0 auto;
@@ -67,8 +66,10 @@ export default {
     font-size: 12px;
   }
   &__body {
-    padding: 10px 0 10px;
+    padding: 10px 10px 10px 0;
     flex: 1;
+    font-size: 15px;
+    line-height: 22px;
   }
 
 }

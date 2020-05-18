@@ -26,7 +26,8 @@ export default {
     h1 {
         position: absolute;
         color: white;
-        font-size: 8em;
+        font-size: 4rem;
+        font-weight: 900;
         top: 10px;
     }
     h1:nth-child(1) {

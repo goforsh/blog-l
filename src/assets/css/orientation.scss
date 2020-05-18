@@ -1,0 +1,168 @@
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+
+  .l-bg__middle {
+    width: 100%;
+    flex-direction: column;
+
+    &-main {
+      flex: 1;
+    }
+
+    &-side {
+      margin-top: 10px;
+      padding: 0 16px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  html {
+    font-size: 16px;
+  }
+
+  .l-bg__middle {
+    width: 100%;
+    flex-direction: column;
+
+    &-main {
+      flex: 1;
+    }
+
+    &-side {
+      margin-top: 10px;
+      padding: 0 16px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+
+  .l-bg__middle {
+    width: 100%;
+    flex-direction: column;
+
+    &-main {
+      flex: 1;
+    }
+
+    &-side {
+      margin-top: 10px;
+      padding: 0 16px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 26px;
+  }
+
+  .l-bg__middle {
+    width: 100%;
+    flex-direction: column;
+
+    &-main {
+      flex: 1;
+    }
+
+    &-side {
+      margin-top: 10px;
+      padding: 0 16px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  html {
+    font-size: 26px;
+  }
+
+  .l-bg__middle {
+    width: 80%;
+
+    &-main {
+      flex: 1;
+    }
+
+    &-side {
+      flex: 0 0 300px;
+    }
+  }
+}
+
+/* .root-wrap{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.content{
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.main{
+  width: 100%;
+  height: 100%;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+.border{
+  width: 100%;
+  height:1px;
+  background: rgba(255,255,255,.2);
+}
+.submit-btn{
+  display: block;
+  width: 80%;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  margin: 30px auto 0;
+  background-color: #2a2e38;
+}
+.pd{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.bg{
+  background: #20232A;
+}
+.mgb{
+  margin-bottom: 1rem;
+}
+.head{
+  height: 2.8rem;
+  line-height: 2.8rem;
+  background: #20232A;
+  padding-left: 1rem;
+}
+.define-loading{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+}
+.van-dialog__message, .van-dialog__header{
+  color: #666;
+}
+@media only screen and (-webkit-device-pixel-ratio:2 ) {
+  .border{
+    transform: scaleY(.5);
+  }
+}
+@media only screen and (-webkit-device-pixel-ratio:3 ) {
+  .border{
+    transform: scaleY(.333333333333333333);
+  }
+} */

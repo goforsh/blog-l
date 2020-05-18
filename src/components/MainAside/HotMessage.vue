@@ -5,9 +5,9 @@
     </TagClip>
     <ul class="l-message__list">
       <li v-for="(item, index) in article"
-          :key="index">
-         <router-link :to="item.url"
-                      class="l-message__item">
+          :key="index"
+          class="l-message__item">
+         <router-link :to="item.url">
             <span>{{item.name}}</span>
             <span>——{{item.num}}次点击</span>
           </router-link>
@@ -64,16 +64,20 @@ export default {
       position: absolute;
       top: 10px;
       left: -16px;
+      font-size: .8rem;
     }
     &__list {
       padding: 48px 10px 10px;
     }
     &__item {
       text-decoration: none;
-      font-size: 15px;
-      color: rgb(59, 58, 58);
+      font-size: .6rem;
+      margin-bottom: .2rem;
+      span {
+        color: rgb(59, 58, 58);
+      }
       span:last-child {
-        font-size: 12px;
+        font-size: .5rem;
         color: rgb(133, 129, 129);
       }
     }

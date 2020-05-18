@@ -67,7 +67,7 @@ export default {
   padding: 0 100px 0;
   &__user, &__split {
     color: white;
-    font-size: .8rem;
+    font-size: 14px;
     line-height: 38px;
   }
   &__user {

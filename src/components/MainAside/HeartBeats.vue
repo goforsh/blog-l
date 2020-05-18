@@ -83,7 +83,7 @@ $heart-color:#e74c3c;
       margin: 20px 0 20px;
       line-height: 20px;
       color: rgba(0, 0, 0, 0.45);
-      font-size: 20px;
+      font-size: .7rem;
     }
 }
 </style>

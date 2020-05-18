@@ -6,12 +6,16 @@
       <ArticleHeader :title="'这是标题'"></ArticleHeader>
       <article class="l-article__main">
         <p>
-          这是文章概述
+          这是文章概述这是文章概述这是文章概述这是文章概述这是文章概述
         </p>
         <img src="../../assets/nezha.jpg" class="l-article__main-img">
       </article>
       <footer class="l-article__footer">
-        <ClickMore :width="'80px'" :height="'30px'" @click.native="goArticle">阅读全文>></ClickMore>
+        <ClickMore :width="'100px'" :height="'30px'" @click.native="goArticle">
+          <span>
+           阅读全文>>
+          </span>
+        </ClickMore>
       </footer>
   </div>
 </template>
@@ -61,20 +65,28 @@ export default {
     }
     &__tag {
       position: absolute;
-      top: 30px;
+      top: 3rem;
+      font-size: .8rem;
       left: -16px;
     }
     &__main {
       max-height: 300px;
       overflow: hidden;
       text-align: center;
+      font-size: .7rem;
+      color: rgb(85, 85, 85);
       &-img {
         width: 90%;
         border-radius: 5px;
+        margin: .5rem auto 0;
       }
     }
     &__footer {
       margin: 10px auto 0;
+      span {
+        font-size: .6rem;
+        line-height: 30px;
+      }
     }
 }
 </style>

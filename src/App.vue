@@ -52,14 +52,7 @@ export default {
     &__middle {
       flex: 1;
       display: flex;
-      padding: 0 30px 0;
-      width: 80%;
-      &-main {
-        flex: 1;
-      }
-      &-side {
-        flex: 0 0 300px;
-      }
+      padding: 0 1rem 0;
     }
   }
 </style>

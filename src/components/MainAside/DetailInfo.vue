@@ -48,7 +48,7 @@ export default {
         portrait:[
             {
                 name: 'me',
-                url: require("../../assets/logo.png")
+                url: require("../../assets/pic/por.jpg")
             },
             {
                 name: 'QQ',
@@ -101,7 +101,6 @@ export default {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     transition: all .3s linear;
     &:hover {
@@ -111,19 +110,18 @@ export default {
     &__header {
         border-radius: 5px;
         text-align: center;
-        margin-bottom: 5px;
-       
+        margin-bottom: .7rem;
     }
     &__detail {
         display: flex;
         justify-content: center;
-        margin-bottom: 15px;
+        margin-bottom: .7rem;
     }
     &__category {
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 18px;
+        font-size: .7rem;
         color: rgb(153, 153, 153);
         padding: 0 10px 0;
         span:first-child {

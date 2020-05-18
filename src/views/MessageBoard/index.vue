@@ -1,6 +1,6 @@
 <template>
   <div class=''>
-      <CommentBoard></CommentBoard>
+      <CommentBoard :title="'留言板'"></CommentBoard>
   </div>
 </template>
 

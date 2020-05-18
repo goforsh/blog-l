@@ -30,13 +30,15 @@ export default {
 .l-article__header {
       text-align: center;
       color:#444;
+      margin: .5rem auto 2rem;
       h1 {
         font-weight: 700;
-        font-size: 25px;
+        font-size: 1rem;
+        margin-bottom: .5rem;
       }
       h2 {
         color: rgb(85, 85, 85);
-        font-size: 14px;
+        font-size: .5rem;
       }
     }
 </style>

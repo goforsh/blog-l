@@ -1,9 +1,7 @@
 <template>
     <a class="l-more" 
       :style="{width:width, 
-               height:height, 
-               'line-height': height, 
-               'font-size': parseInt(height)/38 + 'rem'}">
+               height:height}">
       <slot></slot>
     </a>
 </template>
@@ -26,8 +24,6 @@ export default {
       text-align: center;
       cursor: pointer;
       border-radius: 5px;
-
-      
       color: white;
       margin: 0 auto;
       background: #97dffd;

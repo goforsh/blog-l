@@ -72,10 +72,10 @@ export default {
     margin: 0 auto;
     height: 300px;
     position: relative;
-    top: 220px;
+    top: 230px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     .l-header__portrait {
       width: 100px;
@@ -87,7 +87,7 @@ export default {
       background: linear-gradient(to right, #DF2050, #48456D);
       -webkit-background-clip: text;
       color: transparent;      
-      font-size: 25px;
+      font-size: 1.2rem;
       font-family:hwxk;
     }
   }
