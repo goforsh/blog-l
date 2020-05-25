@@ -28,18 +28,6 @@
     font-size: 16px;
   }
 
-  .l-bg__middle {
-    width: 100%;
-
-    &-main {
-      flex: 1;
-    }
-
-    &-side {
-      margin-top: 10px;
-      padding: 0 16px 0;
-    }
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -66,6 +54,9 @@
     display: block;
   }
 
+  .l-header__mobile {
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 1024px) {

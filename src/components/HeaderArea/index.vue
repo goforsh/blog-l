@@ -5,6 +5,7 @@
       <IconPortrait :url="url"></IconPortrait>
       <div id="vader"></div>
     </section>
+    <NavMobile class="l-header__mobile"></NavMobile>
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import NavBar from "./NavBar";
 import theaterJS from "theaterjs";
 import IconPortrait from '../../components/common/IconPortrait';
+import NavMobile from './NavBar/NavMobile';
 export default {
   name: '',
   data(){
@@ -21,7 +23,8 @@ export default {
   },
   components: {
     NavBar,
-    IconPortrait
+    IconPortrait,
+    NavMobile
   },
   created(){},
   mounted(){

@@ -23,16 +23,6 @@
   html {
     font-size: 16px;
   }
-  .l-bg__middle {
-    width: 100%;
-  }
-  .l-bg__middle-main {
-    flex: 1;
-  }
-  .l-bg__middle-side {
-    margin-top: 10px;
-    padding: 0 16px 0;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -53,6 +43,9 @@
   .l-message,
   .l-header__menu {
     display: block;
+  }
+  .l-header__mobile {
+    display: none !important;
   }
 }
 
