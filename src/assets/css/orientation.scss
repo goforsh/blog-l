@@ -1,11 +1,11 @@
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
   html {
     font-size: 14px;
   }
 
   .l-bg__middle {
     width: 100%;
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     &-main {
       flex: 1;
@@ -16,16 +16,20 @@
       padding: 0 16px 0;
     }
   }
+
+  .l-message,
+  .l-header__menu {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 414px) {
   html {
     font-size: 16px;
   }
 
   .l-bg__middle {
     width: 100%;
-    flex-direction: column;
 
     &-main {
       flex: 1;
@@ -38,47 +42,51 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   html {
     font-size: 20px;
   }
 
   .l-bg__middle {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
 
     &-main {
       flex: 1;
     }
 
     &-side {
-      margin-top: 10px;
+      margin-top: 0px;
       padding: 0 16px 0;
     }
   }
+
+  .l-message,
+  .l-header__menu {
+    display: block;
+  }
+
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   html {
     font-size: 26px;
   }
 
   .l-bg__middle {
     width: 100%;
-    flex-direction: column;
 
     &-main {
       flex: 1;
     }
 
     &-side {
-      margin-top: 10px;
       padding: 0 16px 0;
     }
   }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1200px) {
   html {
     font-size: 26px;
   }

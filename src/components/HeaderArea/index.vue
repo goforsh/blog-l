@@ -72,7 +72,7 @@ export default {
     margin: 0 auto;
     height: 300px;
     position: relative;
-    top: 230px;
+    top: 9rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
