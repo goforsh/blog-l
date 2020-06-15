@@ -1,58 +1,95 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import LayOut from '../LayOut';
 
 Vue.use(VueRouter)
 
  const routes = [
     {
       path: "/",
-      name: "Home",
-      meta: {
-        title: "主页",
-        icon: "el-icon-s-home"
-      },
-      component: () =>
-        import(/* webpackChunkName: "home" */ "../views/home")
+      redirect: "/home",
+      component: LayOut,
+      children: [
+        {
+          path: "home",
+          name: "Home",
+          meta: {
+            title: "主页",
+            icon: "el-icon-s-home"
+          },
+          component: () =>
+            import(/* webpackChunkName: "home" */ "../views/home")
+        },
+      ]
     },
     {
       path: "/about",
-      name: "About",
-      meta: {
-        title: "关于",
-        icon: "el-icon-set-up"
-      },
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "../views/about")
+      component: LayOut,
+      children: [
+        {
+          path: "",
+          name: "About",
+          meta: {
+            title: "关于",
+            icon: "el-icon-set-up"
+          },
+          // route level code-splitting
+          // this generates a separate chunk (about.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
+          component: () =>
+            import(/* webpackChunkName: "about" */ "../views/about")
+        },
+      ]
     },
     {
       path: "/begging",
-      name: "Begging",
-      meta: {
-        title: "赞赏",
-        icon: "el-icon-tableware"
-      },
-      component: () =>
-        import(/* webpackChunkName: "BeggingBowl" */ "../views/BeggingBowl")
+      component: LayOut,
+      children: [
+        {
+          path: "",
+          name: "Begging",
+          meta: {
+            title: "赞赏",
+            icon: "el-icon-tableware"
+          },
+          component: () =>
+            import(/* webpackChunkName: "BeggingBowl" */ "../views/BeggingBowl")
+        },
+      ]
     },
     {
       path: "/message",
-      name: "Message",
-      meta: {
-        title: "留言板",
-        icon: "el-icon-s-comment"
-      },
-      component: () =>
-        import(/* webpackChunkName: "MessageBoard" */ "../views/MessageBoard")
+      component: LayOut,
+      children: [
+        {
+          path: "",
+          name: "Message",
+          meta: {
+            title: "留言板",
+            icon: "el-icon-s-comment"
+          },
+          component: () =>
+            import(/* webpackChunkName: "MessageBoard" */ "../views/MessageBoard")
+        },
+      ]
     },
     {
-      path: "/article/:id",
-      name: "Article",
-      component: () =>
-        import(/* webpackChunkName: "ArticleContent" */ "../views/ArticleContent")
+      path: "/article",
+      component: LayOut,
+      children: [
+        {
+          path: ":id",
+          name: "Article",
+          component: () =>
+            import(/* webpackChunkName: "ArticleContent" */ "../views/ArticleContent")
+        },
+      ]
+    },
+    {
+      path: "*",
+      redirect: "/"
     }
+
   ];
   
 

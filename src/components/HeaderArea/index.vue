@@ -24,7 +24,7 @@ export default {
   components: {
     NavBar,
     IconPortrait,
-    NavMobile
+    NavMobile    
   },
   created(){},
   mounted(){
@@ -48,7 +48,7 @@ export default {
       .addScene("vader:我走的", 200, "很慢,",400,"但我", 200, "一直", 200, "在走", 200, "... ")
 
 
-      
+    
   },
   methods: {}
 }
@@ -61,6 +61,7 @@ export default {
   background: url('../../assets/pic/fate.jpg') no-repeat;
   background-size: 100% 90%;
   background-clip: border-box;
+  position: relative;
   
   &__menu {
     position:sticky;
@@ -72,10 +73,11 @@ export default {
     width: 70%;
     background-color: rgba(230, 244, 249, 0.8);
     border-radius: 5px;
-    margin: 0 auto;
     height: 300px;
-    position: relative;
-    top: 9rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
