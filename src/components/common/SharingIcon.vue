@@ -2,7 +2,8 @@
     <div class="l-sharing">
         <el-tooltip class="l-info__tip" 
                     v-for="(item,index) in items" 
-                    :key="index" :content="item.name" 
+                    :key="index" 
+                    :content="item.name" 
                     placement="top" >
             <i :class="item.icon" @click="click(item)"></i>
         </el-tooltip>

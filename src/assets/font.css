@@ -1,6 +1,6 @@
 @font-face {
     font-family: "hwxk";
-    src: url('hwxk.ttf');
+    src: url('./hwxk.ttf');
     font-weight: normal;
     font-style: normal;
 }

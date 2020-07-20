@@ -7,7 +7,7 @@
       <article class="l-article__main">
         <p>
           这是文章概述这是文章概述这是文章概述这是文章概述这是文章概述
-        </p>
+        </p>       
         <img src="../../assets/nezha.jpg" class="l-article__main-img">
       </article>
       <footer class="l-article__footer">

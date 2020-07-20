@@ -1,5 +1,18 @@
 // const path = require("path");
+// const { SkeletonPlugin } = require('page-skeleton-webpack-plugin')
 
+// module.exports = {
+//     configureWebpack:{
+//         plugins: [
+//             new SkeletonPlugin({
+//                 pathname: path.resolve(__dirname, `./public`), // 用来存储 shell 文件的地址
+//                 staticDir: path.resolve(__dirname, './dist'), // 最好和 `output.path` 相同
+//                 routes: ['/'], // 将需要生成骨架屏的路由添加到数组中
+//                 port:'8990'
+//             })
+//         ]
+//     }
+// }
 // const utils = {
 //   assetsPath: function(_path) {
 //     const assetsSubDirectory =
