@@ -18,7 +18,19 @@ export default {
   components: {
     ArticleItem,
     ClickMore
-  }
+  },
+  beforeCreate() {
+    console.log('h-beforecreated')
+  },
+  created(){
+    console.log('h-created')
+  },
+  beforeMount() {
+    console.log('h-beforemounted')
+  },
+  mounted(){
+    console.log('h-mounted')
+  },
 }
 </script>
 

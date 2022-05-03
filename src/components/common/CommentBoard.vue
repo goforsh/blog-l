@@ -20,7 +20,7 @@
       </div>
       <ClickMore :width="'500px'" :height="'30px'" class="l-board__more">
         <span>
-          点击加载更多  
+          点击加载更多
         </span>
       </ClickMore>
   </div>

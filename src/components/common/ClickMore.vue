@@ -13,8 +13,18 @@ export default {
   },
   props:['width', 'height'],
   components: {},
-  created(){},
-  mounted(){},
+  beforeCreate() {
+    console.log('c-beforecreated')
+  },
+  created(){
+    console.log('c-created')
+  },
+  beforeMount() {
+    console.log('c-beforemounted')
+  },
+  mounted(){
+    console.log('c-mounted')
+  },
   methods: {}
 }
 </script>

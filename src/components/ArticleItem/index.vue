@@ -35,8 +35,18 @@ export default {
     ClickMore,
     ArticleHeader
   },
-  created(){},
-  mounted(){},
+  beforeCreate() {
+    console.log('a-beforecreated')
+  },
+  created(){
+    console.log('a-created')
+  },
+  beforeMount() {
+    console.log('a-beforemounted')
+  },
+  mounted(){
+    console.log('a-mounted')
+  },
   methods: {
     goArticle() {
       console.log(1)

@@ -1,13 +1,13 @@
 <template>
     <div class="l-beg">
         <div class="l-beg__item">
-            <img style="display:block" src="../../assets/pic/begAli.jpg" width="200" height="200" alt="">
+            <img style="display:block" src="../../assets/pic/default.jpg" width="200" height="200" alt="">
             <span>
                 支付宝
             </span>
         </div>
         <div class="l-beg__item">
-             <img style="display:block" src="../../assets/pic/begWechat.jpg" width="200" height="200" alt="">
+             <img style="display:block" src="../../assets/pic/default.jpg" width="200" height="200" alt="">
              <span>
                 微信
             </span>
