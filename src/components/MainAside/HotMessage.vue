@@ -25,13 +25,13 @@ export default {
     return {
       article:[
         {
-          name: '杰杰娃SB',
+          name: 'test',
           num: '250',
           url: '/article/'+1,
           id: 0
         },
         {
-          name: '当当娃SB',
+          name: 'test1',
           num: '250',
           url: '/article/'+2,
           id: 1

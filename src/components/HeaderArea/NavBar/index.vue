@@ -41,7 +41,7 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
-/deep/ 
+::v-deep 
   .el-menu {
     border-bottom: none !important;
     background-color: rgba(84,92,100,.7) !important;
