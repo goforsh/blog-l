@@ -4,7 +4,7 @@
       <WaterWave></WaterWave>
       <div class='l-about__word'>
         <p>
-          三十当立而未立的前端工程师，水平如题，一瓶不满
+          水平如题，一瓶不满
         </p>
         <p>
           但愿学有所成        
